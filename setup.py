@@ -2,7 +2,8 @@ from setuptools import setup, find_packages
 
 install_requires = [
     'fiona',
-    'rasterio'
+    'rasterio',
+    'Click'
     ]
 
 setup(
@@ -22,8 +23,9 @@ setup(
         'Programming Language :: Python',
         'Topic :: Scientific/Engineering :: GIS',
     ],
-    scripts=[
-        'scripts/planetographic',
-        'scripts/planetocentric'
-    ]
+    entry_points='''
+        [console_scripts]
+        planetocentric=planeto.centric:cli
+        planetographic=planeto.graphic:cli
+    ''',
 )
