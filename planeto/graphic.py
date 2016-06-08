@@ -1,7 +1,6 @@
 import click
 import fiona
 import rasterio
-import pycrs
 import numpy as N
 from sys import stdout
 from json import dumps
